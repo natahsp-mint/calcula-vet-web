@@ -1,12 +1,12 @@
-# calcula-vet
+# calcula-vet-web
 
-Projeto em C para cálculo de doses para veterinários.
+Projeto em Python para cálculo de doses para veterinárias com base nas apresentações comerciais dos princípios ativos. 
 
 ## Objetivo
 Criar uma calculadora simples para auxiliar no cálculo de doses com base em variáveis (espécie, peso, contexto de uso, apresentação do fármaco).
 
 ## Tecnologias
-- Linguagem C
+- Python, Cursor, Linux
 
 ## Status
 Em desenvolvimento
