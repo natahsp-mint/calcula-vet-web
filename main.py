@@ -127,3 +127,4 @@ if drug == "prednisolona":
             print(f"Administrar {dose}mg VO em noites alternadas.")
             break
         print("Opção inválida.")
+        print("Opção inválida.")
