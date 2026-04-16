@@ -1,3 +1,6 @@
+import unicodedata
+
+input = lambda prompt="": __import__("builtins").input(prompt).replace(",", ".")
 print("Bem-vindo ao Calcula Vet Web!")
 print("A calculadora baseada no Guia Terapêutico Veterinário 4ª Edição.")
 # ask for the drug name and store it in a variable (retry if invalid)
@@ -15,7 +18,9 @@ VALID_DRUGS = (
     "prednisolona"
 )
 while True:
-    drug = input("Digite o nome do princípio ativo (sem letras maiúsculas e sem acento): ")
+    drug = input("Digite o nome do princípio ativo: ")
+    drug = drug.lower()
+    drug = "".join(char for char in unicodedata.normalize("NFD", drug) if unicodedata.category(char) != "Mn")
     if drug in VALID_DRUGS:
         break
     print("Princípio ativo inválido ou indisponível. Digite outro.")
