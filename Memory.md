@@ -25,6 +25,7 @@ Este arquivo guarda **preferências, decisões e histórico recente** das intera
 | 2026-04-16 | Confirmação: adicionada regra `.cursor/rules/project-context.mdc` (`alwaysApply: true`). |
 | 2026-04-16 | Criado `Plan.md` com análise do projeto, dívida técnica e roadmap por fases (A–D). |
 | 2026-04-17 | Renomeado padrão de nomes para `Project.md` e `Memory.md`. |
+| 2026-04-17 | Implementada validação de faixas mg/kg em `main.py` com `get_dosage_in_range` para amoxicilina, enrofloxacina (cão), omeprazol e prednisolona (casos com faixa). |
 
 ---
 
