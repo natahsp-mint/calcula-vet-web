@@ -17,10 +17,10 @@ Documento de referência para **melhorias futuras** e **dívida técnica** ident
 
 ## 2. Correções e robustez (curto prazo)
 
-- **Entrada numérica:** Tratar `ValueError` quando peso ou mg/kg não forem números válidos; opcionalmente limitar tentativas ou mensagem clara.
-- **Nome reservado:** Evitar sombrear `input` do builtins (usar outro nome para a função que normaliza vírgula).
-- **Prednisolona:** Corrigir string do prompt da espécie (parêntese/colon consistente) e revisar o fluxo do `while True` para que espécie/caso sejam coletados de forma clara quando a combinação for inválida (hoje parte da lógica pode confundir reentrada).
-- **Testes automatizados:** Testes unitários para fórmulas (peso × mg/kg) e, se possível, testes de integração com entrada simulada para cada fármaco.
+- [DONE] **Entrada numérica:** Tratar `ValueError` quando peso ou mg/kg não forem números válidos; opcionalmente limitar tentativas ou mensagem clara.
+- [DONE] **Nome reservado:** Evitar sombrear `input` do builtins (usar outro nome para a função que normaliza vírgula). 
+- [DONE] **Prednisolona:** Corrigir string do prompt da espécie (parêntese/colon consistente) e revisar o fluxo do `while True` para que espécie/caso sejam coletados de forma clara quando a combinação for inválida (hoje parte da lógica pode confundir reentrada).
+- [DONE] **Testes automatizados:** Testes unitários para fórmulas (peso × mg/kg) e, se possível, testes de integração com entrada simulada para cada fármaco.
 
 ---
 

@@ -17,6 +17,7 @@
 | Caminho    | Função |
 |-----------|--------|
 | `main.py` | Lógica principal: validação do fármaco, cálculos e mensagens ao usuário. |
+| `test_main.py` | Testes automatizados (unitários de fórmula e integração com entrada simulada por fármaco). |
 | `README.md` | Visão geral, objetivo, tecnologias e status. |
 | `Project.md`, `Memory.md` | Contexto persistente para humanos e agente (ver regra em `.cursor/rules/`). |
 | `Plan.md` | Roadmap e melhorias futuras; dívida técnica e fases sugeridas. |
