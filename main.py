@@ -21,30 +21,14 @@ def get_dosage_in_range(prompt, min_value, max_value):
 
 print("Bem-vindo ao Calcula Vet Web!")
 print("A calculadora baseada no Guia Terapêutico Veterinário 4ª Edição.")
-# ask for the drug name and store it in a variable (retry if invalid)
-VALID_DRUGS = (
-    "amoxicilina",
-    "dipirona",
-    "doxiciclina",
-    "enrofloxacina",
-    "enrofloxacino",
-    "maropitant",
-    "maropitante",
-    "meloxicam",
-    "metronidazol",
-    "omeprazol",
-    "prednisolona"
-)
-while True:
-    drug = input("Digite o nome do princípio ativo: ")
-    drug = drug.lower()
-    drug = "".join(char for char in unicodedata.normalize("NFD", drug) if unicodedata.category(char) != "Mn")
-    if drug in VALID_DRUGS:
-        break
-    print("Princípio ativo inválido ou indisponível! Tente novamente.")
-dose = 1.0
 # asks for the weight of the animal and store it in a variable
 weight = get_numeric_input("Digite o peso do animal: ")
+# ask for the drug name and store it in a variable (retry if invalid)
+drug = input("Digite o nome do princípio ativo: ")
+drug = drug.lower()
+drug = "".join(char for char in unicodedata.normalize("NFD", drug) if unicodedata.category(char) != "Mn")
+# call the dose variable and stores a float on it
+dose = 1.0
 
 # the user types amoxicilina
 if drug == "amoxicilina":
@@ -80,7 +64,7 @@ elif drug in ("enrofloxacina", "enrofloxacino"):
         print("Opção inválida. Escolha 1 (Cão) ou 2 (Gato).")
 
 # the user types maropitant
-if drug in ("maropitant", "maropitante"):
+elif drug in ("maropitant", "maropitante"):
     print(f"Administrar {weight}mg SC/VO SID")
 
 # the user types meloxicam
@@ -100,7 +84,7 @@ elif drug == "meloxicam":
         print("Opção inválida. Escolha 1 (Cão) ou 2 (Gato).")
 
 # the user types metronidazol
-if drug == "metronidazol":
+elif drug == "metronidazol":
     print("1 - Giardíase")
     print("2 - Anaeróbicos")
     while True:
@@ -116,13 +100,13 @@ if drug == "metronidazol":
         print("Opção inválida. Escolha 1 ou 2.")
 
 # the user types omeprazol
-if drug == "omeprazol":
+elif drug == "omeprazol":
     dosage = get_dosage_in_range("Digite a dosagem desejada entre 0.5-1mg/kg: ", 0.5, 1)
     dose = dosage * weight
     print(f"Administrar {dose}mg VO SID.")
 
 # the user types prednisolona
-if drug == "prednisolona":
+elif drug == "prednisolona":
     print("1 - Cão")
     print("2 - Gato")
     species = input("Selecione a opção da espécie: ")
@@ -159,3 +143,5 @@ if drug == "prednisolona":
             print(f"Administrar {dose}mg VO em noites alternadas.")
             break
         print("Opção inválida.")
+else:
+    print("Princípio ativo inválido ou indisponível! Tente novamente.")

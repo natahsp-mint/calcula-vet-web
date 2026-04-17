@@ -18,8 +18,6 @@ Documento de referência para **melhorias futuras** e **dívida técnica** ident
 ## 2. Correções e robustez (curto prazo)
 
 - **Entrada numérica:** Tratar `ValueError` quando peso ou mg/kg não forem números válidos; opcionalmente limitar tentativas ou mensagem clara.
-- **Validação de faixas:** Onde o texto pede intervalos (ex.: 10–20 mg/kg, 5–10 mg/kg), validar entrada e repetir pergunta se estiver fora da faixa (com consentimento clínico documentado no código/comentário).
-- **Fluxo de controle:** Unificar ramificações em uma cadeia coerente (`if` / `elif` / `else` ou `match`) para cada `drug`, evitando blocos `if` independentes que dificultam manutenção e leitura.
 - **Nome reservado:** Evitar sombrear `input` do builtins (usar outro nome para a função que normaliza vírgula).
 - **Prednisolona:** Corrigir string do prompt da espécie (parêntese/colon consistente) e revisar o fluxo do `while True` para que espécie/caso sejam coletados de forma clara quando a combinação for inválida (hoje parte da lógica pode confundir reentrada).
 - **Testes automatizados:** Testes unitários para fórmulas (peso × mg/kg) e, se possível, testes de integração com entrada simulada para cada fármaco.
