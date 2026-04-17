@@ -6,12 +6,12 @@ Documento de referência para **melhorias futuras** e **dívida técnica** ident
 
 ## 1. Estado atual (resumo)
 
-| Aspecto | Situação |
-|--------|-----------|
-| Interface | CLI única (`input` / `print`); mensagem de boas-vindas diz “Web”, mas não há aplicação web. |
-| Dados | Doses e textos embutidos no código; referência: Guia Terapêutico Veterinário 4ª ed. |
-| Fármacos | 9 entradas lógicas (com sinônimos); fluxos por espécie/caso onde aplicável. |
-| README | Menciona “apresentações comerciais” e variáveis — ainda não refletido no código. |
+| Aspecto | Situação                                                                    |
+|---------|-----------------------------------------------------------------------------|
+|Interface| CLI única (`input` / `print`); mensagem de boas-vindas diz “Web”, mas não há aplicação web ainda.                                                                    |
+|  Dados  | Doses e textos embutidos no código; referência: Guia Terapêutico Veterinário 4ª ed.                                                                                  |
+| Fármacos| 9 entradas lógicas (com sinônimos); fluxos por espécie/caso onde aplicável. |
+|  README | Menciona “apresentações comerciais” e variáveis — ainda não refletido no código.                                                                                 |
 
 ---
 
@@ -29,6 +29,7 @@ Documento de referência para **melhorias futuras** e **dívida técnica** ident
 - **Apresentações comerciais:** Modelar concentrações (mg/ml, mg/comprimido) e calcular **volume ou fração de comprimido** além da dose em mg, com escolha de apresentação.
 - **Mais variáveis:** Campos como espécies adicionais, idade, insuficiência renal/hepática — apenas com base em referências explícitas no guia e sempre com aviso de que é apoio, não substitui julgamento clínico.
 - **Sincronizar nome do produto:** Ou renomear mensagens para “Calcula Vet” até existir web, ou planear entrega web e manter o branding coerente.
+- Integração com bases de dados de bulário pago ou APIs terceiras — avaliar legalidade e termos de uso antes.
 
 ---
 
@@ -61,20 +62,16 @@ O nome **calcula-vet-web** e o texto de boas-vindas sugerem evolução para web.
 
 ## 7. Roadmap sugerido (fases)
 
-| Fase | Foco |
-|------|------|
-| **A** | Correções de robustez, refatoração de fluxo, testes nas fórmulas críticas. |
-| **B** | Dados externos + funções de cálculo puras; CLI usando essa camada. |
-| **C** | Apresentações comerciais e variáveis adicionais alinhadas ao README. |
-| **D** | Interface web + deploy; aviso legal visível. |
-
----
-
-## 8. O que não está neste plano
-
-- Conteúdo clínico novo sem base no guia referenciado (deve ser decisão explícita e revisão humana).
-- Integração com bases de dados de bulário pago ou APIs terceiras — avaliar legalidade e termos de uso antes.
+| Fase | Foco                                                                       |
+|------|----------------------------------------------------------------------------|
+| **A**| Correções de robustez, refatoração de fluxo, testes nas fórmulas críticas. |
+| **B**| Dados externos + funções de cálculo puras; CLI usando essa camada.         |
+| **C**| Apresentações comerciais e variáveis adicionais alinhadas ao README.       |
+| **D**| Interface web + deploy; aviso legal visível.                               |
 
 ---
 
 *Última revisão do documento: alinhada ao código e README na data da criação do ficheiro; atualizar `Project.md` / `Memory.md` quando fases forem concluídas ou repriorizadas.*
+
+CHECKLIST (By Natahsp-mint):
+[] adcionar função "Restart" para user restartar código a qualquer momento.
