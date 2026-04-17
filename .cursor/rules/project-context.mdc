@@ -1,0 +1,22 @@
+---
+description: Manter Project.md, Memory.md e Plan.md alinhados ao trabalho
+alwaysApply: true
+---
+
+# Contexto do projeto (Calcula Vet)
+
+## Arquivos na raiz
+
+- **`Project.md`** — Estado estável: objetivo do produto, stack, estrutura do repositório, fármacos suportados e comportamento resumido. Atualizar quando mudar escopo, lista de fármacos, arquivos principais ou referências oficiais.
+- **`Memory.md`** — Memória de trabalho: preferências do usuário, decisões, linha do tempo curta, backlog e notas técnicas para retomada.
+- **`Plan.md`** — Roadmap e melhorias futuras. Atualizar quando uma fase for concluída, prioridades mudarem ou itens de dívida técnica forem resolvidos.
+
+## O que fazer
+
+1. **No início de tarefas relevantes**, ler `Project.md` e `Memory.md` quando precisar de contexto (objetivo, convenções, histórico); consultar `Plan.md` para direção de longo prazo.
+2. **Após** mudanças importantes no código, estrutura ou acordos com o usuário, **atualizar** o arquivo adequado:
+   - fatos duráveis → `Project.md`;
+   - sessão, preferências, decisões pontuais → `Memory.md`;
+   - progresso no roadmap ou repriorização → `Plan.md`.
+3. **Não** substituir o `README.md` por estes arquivos; o README continua sendo a entrada pública do repositório, salvo pedido explícito em contrário.
+4. Manter entradas **curtas** e **acionáveis**; evitar duplicar parágrafos inteiros do código.
