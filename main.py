@@ -124,7 +124,7 @@ def run_cli():
         while True:
             print("1 - Cão")
             print("2 - Gato")
-            species = builtins.input("Selecione a espécie (digite apenas o número): ")
+            species = builtins.input("Selecione a opção da espécie: ")
             print("1 - Alergia")
             print("2 - Imunossupressão")
             print("3 - Uso prolongado")
