@@ -36,7 +36,7 @@ def normalize_drug_name(drug_name):
 
 def run_cli():
     print("Bem-vindo ao Calcula Vet Web!")
-    print("A calculadora baseada no Guia Terapêutico Veterinário 4ª Edição.")
+    print("A calculadora baseada no Guia Terapêutico Veterinário 4ª Edição (Este material serve de apoio e não dispensa julgamento clínico).")
     # asks for the weight of the animal and store it in a variable
     weight = get_numeric_input("Digite o peso do animal: ")
     # ask for the drug name and store it in a variable (retry if invalid)

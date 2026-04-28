@@ -6,12 +6,12 @@ Documento de referência para **melhorias futuras** e **dívida técnica** ident
 
 ## 1. Estado atual (resumo)
 
-| Aspecto | Situação                                                                    |
-|---------|-----------------------------------------------------------------------------|
-|Interface| CLI única (`input` / `print`); mensagem de boas-vindas diz “Web”, mas não há aplicação web ainda.                                                                    |
-|  Dados  | Doses e textos embutidos no código; referência: Guia Terapêutico Veterinário 4ª ed.                                                                                  |
-| Fármacos| 9 entradas lógicas (com sinônimos); fluxos por espécie/caso onde aplicável. |
-|  README | Menciona “apresentações comerciais” e variáveis — ainda não refletido no código.                                                                                 |
+| Aspecto | Situação                                                                                         |
+|---------|--------------------------------------------------------------------------------------------------|
+|Interface| CLI única (`input` / `print`); mensagem de boas-vindas diz “Web”, mas não há aplicação web ainda.|
+|  Dados  | Doses e textos embutidos no código; referência: Guia Terapêutico Veterinário 4ªed.               |
+| Fármacos| 9 entradas lógicas (com sinônimos); fluxos por espécie/caso onde aplicável.                      |
+|  README | Menciona “apresentações comerciais” e variáveis — ainda não refletido no código.                 9|
 
 ---
 
