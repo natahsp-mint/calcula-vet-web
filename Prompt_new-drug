@@ -1,14 +1,13 @@
-Add according to the (main.py)'s code drugs alphabetic order a new drug option: [NOME].
-[WITH/WITHOUT] species options.
-Remember to always put species options first (just in case they exist), then the use/case option or any other options.
-Before writing the code, recheck the current main.py strings to write it with the exact same wording.
+Following the pattern and wording of how the drugs are written at the main.py file, add in alphabetic order a new drug option named [NOME].
+[WITH/WITHOUT] species options: Remember, in case species do not apply, don't write them - But in case they do, they must come before the the use/case option or any other options.
+Dosage in range or options?
+The dose is [DOSE] [ADM VIAS] [TIME INTERVAL].
 
+TESTE
 
-TESTE:
-
-add according to tthe main.py code, according to the alphabetic order that the drugs are listed, a new drug option: acepromazina, acepran.
-NO SPECIES OPTIONS
-Options: 1 - VO or 2 - IV/IM/SC.
-dose for option 1 is is 0,5-2mg/kg and for option 2 is 0,1-0,2mg/kg.
-Remember to always put species options first (just in case they exist), then the use/case option or any other options.
-Before writing it, recheck the current main.py strings to write it similar.
+Following the pattern and wording of how the drugs are written at the main.py file, add in alphabetic order a new drug option named acepromazina, acepran.
+NO species options: Remember, in case species do not apply, don't write them - But in case they do, they must come before the the use/case option or any other options.
+Select "Opção de via de administração":
+1 - VO
+2 - IV/IM/SC
+For option 1, dose is 0,5-2mg/kg and for option 2 is 0,1-0,2mg/kg.

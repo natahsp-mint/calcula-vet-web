@@ -1,7 +1,7 @@
 import unicodedata
 import builtins
 
-
+#replace comma with dot for numeric input
 def normalized_input(prompt=""):
     return builtins.input(prompt).replace(",", ".")
 
@@ -21,11 +21,11 @@ def get_dosage_in_range(prompt, min_value, max_value):
             return dosage
         print(f"Valor fora da faixa permitida ({min_value}-{max_value} mg/kg).")
 
-
+#calculate the dose
 def calculate_dose_mg(weight, mg_per_kg):
     return weight * mg_per_kg
 
-
+#convert drug name to lowercase and remove accents
 def normalize_drug_name(drug_name):
     lowered_name = drug_name.lower()
     return "".join(
@@ -36,7 +36,7 @@ def normalize_drug_name(drug_name):
 
 def run_cli():
     print("Bem-vindo ao Calcula Vet Web!")
-    print("A calculadora baseada no Guia Terapêutico Veterinário 4ª Edição (Este material serve de apoio e não dispensa julgamento clínico).")
+    print("A calculadora baseada no Guia Terapêutico Veterinário 4ª Edição\n(Este material serve de apoio e não dispensa julgamento clínico, utilize por sua conta e risco).")
     # asks for the weight of the animal and store it in a variable
     weight = get_numeric_input("Digite o peso do animal: ")
     # ask for the drug name and store it in a variable (retry if invalid)
@@ -44,8 +44,57 @@ def run_cli():
     # call the dose variable and stores a float on it
     dose = 1.0
 
+    #user types ácido tranexâmico
+    if drug == "ácido tranexâmico":
+        dosage = get_dosage_in_range("Digite a dosagem desejada entre 10-20mg/kg: ", 10, 20)
+        dose = calculate_dose_mg(weight, dosage)
+        print(f"Administrar 1{dose}mg IV(lento)/IM/SC/VO a cada 6-8 horas")
+
+    #user types adrenalina or epinefrina
+
+    #user types albendazol
+    elif drug == "albendazol":
+        dose = calculate_dose_mg(weight, 25)
+        print(f"Administrar {dose}mg VO BID durante 3-5 dias")
+
+    #user types alopurinol
+    elif drug == "alopurinol":
+        print("1 - Cão")
+        print("2 - Gato")
+        while True:
+            species = builtins.input("Selecione a opção da espécie: ")
+            if species == "1":
+                dosage = get_dosage_in_range("Digite a dosagem desejada entre 10-15mg/kg: ")
+                dose = calculate_dose_mg(weight, dosage)
+                print(f"Administrar {dose}mg por VO a cada 8-12 horas.")
+                print("Para tratamento de leishmaniose visceral, ver protocolos nos anexos do livro.")
+                break
+            elif species == "2":
+                dosage = get_dosage_in_range("Digite a dosagem desejada entre 10-20mg/kg: ")
+                dose = calculate_dose_mg(weight, dosage)
+                print(f"Administrar {dose}mg por VO a cada 12-24 horas.")
+                break
+            print("Opção inválida. Escolha 1 (Cão) ou 2 (Gato).")
+                
+    #user types alprazolam
+    elif drug == "alprazolam":
+        print("1 - Cão")
+        print("2 - Gato")
+        while True:
+            species = builtins.input("Selecione a opção da espécie: ")
+            if species == "1":
+                dosage = get_dosage_in_range("Digite a dosagem desejada entre 0.02-0.1mg/kg: ")
+                dose = calculate_dose_mg(weight, dosage)
+                print(f"Administrar {dose}mg por VO a cada 6-12 horas.Não exceder 4mg/animal/dia.")
+                break
+            elif species == "2":
+                dosage = get_dosage_in_range("Digite a dosagem desejada entre 0.125-0.25mg/animal: ")
+                print(f"Administrar {dosage}mg por VO a cada 8-24 horas.")
+                break
+            print("Opção inválida. Escolha 1 (Cão) ou 2 (Gato).")
+
     # the user types amoxicilina
-    if drug == "amoxicilina":
+    elif drug == "amoxicilina":
         dosage = get_dosage_in_range("Digite a dosagem desejada entre 10-20mg/kg: ", 10, 20)
         dose = calculate_dose_mg(weight, dosage)
         print(f"Administrar {dose}mg IM/SC/VO a cada 8-12 horas.")
