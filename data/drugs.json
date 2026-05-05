@@ -1,0 +1,74 @@
+{
+  "albendazol": {
+    "type": "fixed",
+    "dose_mg_por_kg": 25,
+    "intervalo_horas": 12,
+    "duracao_dias": "3–5",
+    "via": "VO"
+  },
+  "alopurinol": {
+    "type": "fixed",
+    "dose_mg_por_kg": 10,
+    "intervalo_horas": 12,
+    "via": "VO"
+  },
+  "alprazolam": {
+    "type": "fixed",
+    "dose_mg_por_kg": 0.05,
+    "intervalo_horas": "8–12",
+    "via": "VO"
+  },
+  "amoxicilina": {
+    "type": "range",
+    "min_mg_por_kg": 10,
+    "max_mg_por_kg": 20,
+    "intervalo_horas": "8–12",
+    "via": "IM/SC/VO"
+  },
+  "dipirona": {
+    "type": "fixed",
+    "dose_mg_por_kg": 25,
+    "intervalo_horas": 8,
+    "via": "IV/IM/SC/VO"
+  },
+  "doxiciclina": {
+    "type": "fixed",
+    "dose_mg_por_kg": 10,
+    "intervalo_horas": "12–24",
+    "via": "IV/VO"
+  },
+  "enrofloxacina": {
+    "type": "fixed",
+    "dose_mg_por_kg": 5,
+    "intervalo_horas": 24,
+    "via": "VO"
+  },
+  "maropitant": {
+    "type": "fixed",
+    "dose_mg_por_kg": 1,
+    "intervalo_horas": 24
+  },
+  "meloxicam": {
+    "type": "fixed",
+    "dose_mg_por_kg": 0.1,
+    "intervalo_horas": 24
+  },
+  "metronidazol": {
+    "type": "fixed",
+    "dose_mg_por_kg": 15,
+    "intervalo_horas": 12,
+    "via": "VO"
+  },
+  "omeprazol": {
+    "type": "fixed",
+    "dose_mg_por_kg": 1,
+    "intervalo_horas": 24,
+    "via": "VO"
+  },
+  "prednisolona": {
+    "type": "fixed",
+    "dose_mg_por_kg": 1,
+    "intervalo_horas": 12,
+    "via": "VO"
+  }
+}

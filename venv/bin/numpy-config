@@ -1,4 +1,4 @@
-#!/home/natalia/Documents/Calcula_Vet/venv/bin/python3
+#!/home/natalia/Documents/calcula_vet/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
