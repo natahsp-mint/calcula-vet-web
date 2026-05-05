@@ -1,11 +1,14 @@
 import unicodedata
 import builtins
 
+print("Bem-vindo ao Calcula Vet Web!")
+print("A calculadora baseada no Guia Terapêutico Veterinário 4ª Edição\n(Este material serve de apoio e não dispensa julgamento clínico, utilize por sua conta e risco).")
+
 #replace comma with dot for numeric input
 def normalized_input(prompt=""):
     return builtins.input(prompt).replace(",", ".")
 
-#fix in case numeric value is asked and user mistakes the entry
+#fix in case a numeric value is asked and user mistakes the entry
 def get_numeric_input(prompt):
     while True:
         try:
@@ -25,7 +28,7 @@ def get_dosage_in_range(prompt, min_value, max_value):
 def calculate_dose_mg(weight, mg_per_kg):
     return weight * mg_per_kg
 
-#convert drug name to lowercase and remove accents
+#convert drug names to lowercase and remove accents
 def normalize_drug_name(drug_name):
     lowered_name = drug_name.lower()
     return "".join(
@@ -35,14 +38,10 @@ def normalize_drug_name(drug_name):
 
 
 def run_cli():
-    print("Bem-vindo ao Calcula Vet Web!")
-    print("A calculadora baseada no Guia Terapêutico Veterinário 4ª Edição\n(Este material serve de apoio e não dispensa julgamento clínico, utilize por sua conta e risco).")
     # asks for the weight of the animal and store it in a variable
     weight = get_numeric_input("Digite o peso do animal: ")
     # ask for the drug name and store it in a variable (retry if invalid)
     drug = normalize_drug_name(builtins.input("Digite o nome do princípio ativo: "))
-    # call the dose variable and stores a float on it
-    dose = 1.0
 
     #user types ácido tranexâmico
     if drug == "ácido tranexâmico":
