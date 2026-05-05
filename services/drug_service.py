@@ -2,12 +2,13 @@ import json
 import os
 from services.calculator import calculate_dose_mg
 
+
 # caminho absoluto até /data/drugs.json
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-JSON_PATH = os.path.join(BASE_DIR, "data", "drugs.json")
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_PATH = BASE_DIR / "data" / "drugs.json"
 
 def load_drugs():
-    with open(JSON_PATH, "r", encoding="utf-8") as f:
+    with open(DATA_PATH, "r", encoding="utf-8") as f:
         return json.load(f)
 
 drugs_db = load_drugs()
