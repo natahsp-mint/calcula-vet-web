@@ -1,34 +1,83 @@
 import streamlit as st
-from services.drug_service import get_drug_data, calculate_protocol
-
-st.title("💊 Calculadora Veterinária")
-
-drug = st.selectbox(
-    "Escolha o fármaco",
-    [
-        "Albendazol","Alopurinol","Alprazolam","Amoxicilina","Dipirona",
-        "Doxiciclina","Enrofloxacina","Maropitant","Meloxicam",
-        "Metronidazol","Omeprazol","Prednisolona"
-    ]
+from services.drug_service import (
+    get_drug_data,
+    needs_species,
+    needs_indication,
+    needs_range,
+    resolve_dose_node,
+    calculate_protocol
 )
+
+st.title("🐾 Calculadora Veterinária de Doses")
+
+# 🧠 1) escolher droga
+drug_list = [
+    "maropitant",
+    "amoxicilina",
+    "meloxicam",
+    "prednisolona"
+]
+
+drug = st.selectbox("Escolha o fármaco:", drug_list)
 
 weight = st.number_input("Peso do paciente (kg)", min_value=0.1)
 
-drug_key = drug.lower()
-data = get_drug_data(drug_key)
+drug_data = get_drug_data(drug)
 
+species = None
+indication = None
 chosen_dose = None
 
-# ⭐ SE FOR DOSE EM FAIXA → MOSTRA SLIDER
-if data and data["type"] == "range":
-    st.warning("Este fármaco possui dose em faixa.")
-    chosen_dose = st.slider(
-        "Escolha a dose (mg/kg)",
-        data["min_mg_por_kg"],
-        data["max_mg_por_kg"],
-        (data["min_mg_por_kg"] + data["max_mg_por_kg"]) / 2
+# 🧠 2) perguntar espécie se necessário
+if needs_species(drug_data):
+    species = st.selectbox(
+        "Espécie:",
+        list(drug_data["species"].keys())
     )
 
-if st.button("Calcular"):
-    resultado = calculate_protocol(drug_key, weight, chosen_dose)
+# 🧠 3) perguntar indicação se necessário
+if species and needs_indication(drug_data, species):
+    indication = st.selectbox(
+        "Indicação:",
+        list(drug_data["species"][species]["indications"].keys())
+    )
+
+# 🧠 4) descobrir o nó final da dose
+if drug:
+    if needs_species(drug_data) and not species:
+        st.stop()
+
+    if species and needs_indication(drug_data, species) and not indication:
+        st.stop()
+
+    dose_data = resolve_dose_node(drug, species, indication)
+
+    # 🧠 5) perguntar dose se for RANGE
+    if needs_range(dose_data):
+        chosen_dose = st.number_input(
+            f"Escolha a dose ({dose_data['min']} – {dose_data['max']} mg/kg)",
+            min_value=float(dose_data["min"]),
+            max_value=float(dose_data["max"])
+        )
+    else:
+        chosen_dose = dose_data["value"]
+
+# 🧮 6) botão calcular
+if st.button("Calcular dose"):
+    if weight <= 0:
+        st.error("Informe o peso.")
+        st.stop()
+
+    if chosen_dose is None:
+        st.error("Complete as informações.")
+        st.stop()
+
+    resultado = calculate_protocol(
+        drug,
+        weight,
+        chosen_dose,
+        species,
+        indication
+    )
+
     st.success(resultado)

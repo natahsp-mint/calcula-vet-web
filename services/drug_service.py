@@ -1,44 +1,55 @@
 import json
-from pathlib import Path
+import os
 from services.calculator import calculate_dose_mg
 
-# 📍 descobrir automaticamente a pasta raiz do projeto
-BASE_DIR = Path(__file__).resolve().parent.parent
-DRUGS_FILE = BASE_DIR / "data" / "drugs.json"
+# caminho absoluto até /data/drugs.json
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+JSON_PATH = os.path.join(BASE_DIR, "data", "drugs.json")
 
 def load_drugs():
-    with open(DRUGS_FILE, "r", encoding="utf-8") as f:
+    with open(JSON_PATH, "r", encoding="utf-8") as f:
         return json.load(f)
 
 drugs_db = load_drugs()
 
+# 🔎 obter dados da droga
 def get_drug_data(drug):
     return drugs_db.get(drug)
 
-def calculate_protocol(drug, weight, chosen_dose=None):
-    data = drugs_db.get(drug)
+# 🔎 verificar se precisa perguntar espécie
+def needs_species(drug_data):
+    return "species" in drug_data
 
-    if not data:
-        return "Fármaco não encontrado."
+# 🔎 verificar se precisa perguntar indicação
+def needs_indication(drug_data, species):
+    return "indications" in drug_data["species"][species]
 
-    if data["type"] == "fixed":
-        dose_mg = calculate_dose_mg(weight, data["dose_mg_por_kg"])
+# 🔎 verificar se precisa perguntar dose (range)
+def needs_range(dose_data):
+    return dose_data["type"] == "range"
 
-    elif data["type"] == "range":
-        if chosen_dose is None:
-            return None
-        dose_mg = calculate_dose_mg(weight, chosen_dose)
+# 🧠 encontrar o nó final da dose na árvore
+def resolve_dose_node(drug, species=None, indication=None):
+    data = drugs_db[drug]
 
-    intervalo = data.get("intervalo_horas", "")
-    via = data.get("via", "")
-    duracao = data.get("duracao_dias", "")
+    # se tiver espécie
+    if "species" in data:
+        data = data["species"][species]
 
-    texto = f"Administrar {dose_mg} mg"
-    if via:
-        texto += f" via {via}"
-    if intervalo:
-        texto += f" a cada {intervalo}h"
-    if duracao:
-        texto += f" por {duracao} dias"
+    # se tiver indicação
+    if "indications" in data:
+        data = data["indications"][indication]
 
-    return texto
+    return data["dose"]
+
+# 💊 cálculo final
+def calculate_protocol(drug, weight, chosen_dose, species=None, indication=None):
+    dose_data = resolve_dose_node(drug, species, indication)
+
+    mg_total = calculate_dose_mg(weight, chosen_dose)
+
+    return (
+        f"Administrar {mg_total} mg "
+        f"{dose_data['route']} "
+        f"a cada {dose_data['interval']}."
+    )
