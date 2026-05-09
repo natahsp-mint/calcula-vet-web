@@ -1,0 +1,5 @@
+Insert the drug appropriately inside the file "drugs.json" following the rules below:
+1 - add ONLY the drug asked, nothing else and nothing less (DO NOT touch the drugs that are already in);
+2 - DO NOT change the wording and writing pattern of the file, simply insert the requested drug in the same writing/wording manner;
+2 - position the drug between the others from the file in alphabetic order;
+

@@ -1,4 +1,24 @@
 {
+  "acepromazina parenteral": {
+    "dose": {
+      "type": "range",
+      "min": 0.1,
+      "max": 0.2,
+      "interval": "dose única",
+      "route": "IV/IM/SC (dose total máxima: 3mg para cães e 1mg para gatos)"
+    }
+  },
+  
+  "acepromazina enteral": {
+    "dose": {
+      "type": "range",
+      "min": 0.5,
+      "max": 2,
+      "interval": "dose única",
+      "route": "VO (dose total máxima: 3 mg para cães e 1 mg para gatos)"
+    }
+  },
+
   "ácido tranexâmico": {
     "dose": {
       "type": "range",
@@ -25,6 +45,16 @@
       "max": 20,
       "interval": "a cada 8-12 horas",
       "route": "VO/IM/SC"
+    }
+  },
+
+  "condroitina, sulfato de": {
+    "dose": {
+      "type": "range",
+      "min": 15,
+      "max": 30,
+      "interval": "SID",
+      "route": "VO durante 4-6 semanas; se houver resposta positiva, pode ser administrada BID."
     }
   },
   

@@ -9,8 +9,8 @@ from services.drug_service import (
     calculate_protocol
 )
 
-st.title("🐾 Bem-vindo ao Calcula Vet!")
-st.subheader("Calculadora baseada no Guia Terapêutico Veterinário 4ª Edição.")
+
+st.title("🐾 Bem-vindo ao Calcula Vet")
 
 # carregar banco atualizado
 drugs_db = load_drugs()
@@ -85,4 +85,8 @@ if st.button("Calcular dose"):
     st.success(resultado)
 
 st.divider()
+<<<<<<< HEAD
 st.caption("Este material serve de apoio e não dispensa julgamento clínico, utilize por sua conta e risco.")
+=======
+st.caption("Este material é baseado na 4ª Edição do Guia Terapêutico Veterinário e serve de apoio, não dispensando julgamento clínico. Utilize por sua conta e risco.")
+>>>>>>> 4ac0976 (organizes drugs.json)
