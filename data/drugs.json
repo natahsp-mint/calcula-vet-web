@@ -1,4 +1,33 @@
 {
+  "ácido tranexâmico": {
+    "dose": {
+      "type": "range",
+      "min": 10,
+      "max": 20,
+      "interval": "a cada 6-8 horas",
+      "route": "IV(lento)/IM/SC/VO"
+    }
+  },
+
+  "albendazol": {
+    "dose": {
+      "type": "fixed",
+      "value": 25,
+      "interval": "BID",
+      "route": "VO durante 3-4 dias"
+    }
+  },
+
+  "amoxicilina": {
+    "dose": {
+      "type": "range",
+      "min": 10,
+      "max": 20,
+      "interval": "a cada 8-12 horas",
+      "route": "VO/IM/SC"
+    }
+  },
+  
   "maropitant": {
     "dose": {
       "type": "fixed",
@@ -8,56 +37,83 @@
     }
   },
 
-  "amoxicilina": {
-    "dose": {
-      "type": "range",
-      "min": 10,
-      "max": 20,
-      "interval": "12h",
-      "route": "VO/IM/SC"
-    }
-  },
-
   "meloxicam": {
     "species": {
-      "cao": {
+      "cão": {
         "dose": {
           "type": "fixed",
           "value": 0.1,
           "interval": "SID",
-          "route": "VO"
+          "route": "VO. (Administre o dobro da dose apenas no 1º dia via IV/SC/VO e prossiga conforme cálculo)"
         }
       },
-      "gato": {
+      "felino": {
         "dose": {
           "type": "fixed",
           "value": 0.05,
           "interval": "SID",
-          "route": "VO"
+          "route": "VO (Administre o dobro da dose apenas no 1º dia via IV/SC/VO e prossiga conforme cálculo)"
         }
       }
     }
   },
 
   "prednisolona": {
-    "species": {
-      "cao": {
+    "species": {     
+      "cão": {
         "indications": {
-          "anti-inflamatoria": {
+          "alergia": {
             "dose": {
               "type": "range",
               "min": 0.5,
               "max": 1,
               "interval": "BID",
+              "route": "VO/IM"
+            }
+          },
+          "imunossupressão": {
+            "dose": {
+              "type": "fixed",
+              "value": 2,
+              "interval": "BID",
+              "route": "VO/IM"
+            }
+          },
+          "uso prolongado": {
+            "dose": {
+              "type": "range",
+              "min": 0.5,
+              "max": 2,
+              "interval": "em manhãs alternadas",
               "route": "VO"
+            }
+          }
+        }
+      },
+      "felino": {
+        "indications": {
+          "alergia": {
+            "dose": {
+              "type": "fixed",
+              "value": 1,
+              "interval": "BID",
+              "route": "VO/IM"
             }
           },
           "imunossupressora": {
             "dose": {
+              "type": "fixed",
+              "value": 3,
+              "interval": "BID",
+              "route": "VO/IM"
+            }
+          },
+          "uso prolongado": {
+            "dose": {
               "type": "range",
               "min": 2,
               "max": 4,
-              "interval": "BID",
+              "interval": "em noites alternadas",
               "route": "VO"
             }
           }

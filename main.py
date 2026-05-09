@@ -47,7 +47,7 @@ def run_cli():
     if drug == "ácido tranexâmico":
         dosage = get_dosage_in_range("Digite a dosagem desejada entre 10-20mg/kg: ", 10, 20)
         dose = calculate_dose_mg(weight, dosage)
-        print(f"Administrar 1{dose}mg IV(lento)/IM/SC/VO a cada 6-8 horas")
+        print(f"Administrar {dose}mg IV(lento)/IM/SC/VO a cada 6-8 horas")
 
     #user types adrenalina or epinefrina
 

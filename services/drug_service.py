@@ -51,7 +51,7 @@ def calculate_protocol(drug, weight, chosen_dose, species=None, indication=None)
     mg_total = calculate_dose_mg(weight, chosen_dose)
 
     return (
-        f"Administrar {mg_total} mg "
+        f"Administrar {mg_total}mg "
         f"{dose_data['route']} "
-        f"a cada {dose_data['interval']}."
+        f"{dose_data['interval']}."
     )
