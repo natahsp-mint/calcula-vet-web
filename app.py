@@ -9,7 +9,8 @@ from services.drug_service import (
     calculate_protocol
 )
 
-st.title("🐾 Calculadora Veterinária de Doses")
+st.title("🐾 Bem-vindo ao Calcula Vet!")
+st.subheader("Calculadora baseada no Guia Terapêutico Veterinário 4ª Edição.")
 
 # carregar banco atualizado
 drugs_db = load_drugs()
@@ -17,6 +18,8 @@ drugs_db = load_drugs()
 # lista automática de fármacos
 drug_list = sorted(list(drugs_db.keys()))
 
+# lista automática de fármacos
+drug_list = sorted(list(drugs_db.keys()))
 drug = st.selectbox("Escolha o fármaco:", drug_list)
 
 weight = st.number_input("Peso do paciente (kg)", min_value=0.1)
@@ -80,3 +83,6 @@ if st.button("Calcular dose"):
     )
 
     st.success(resultado)
+
+st.divider()
+st.caption("Este material serve de apoio e não dispensa julgamento clínico, utilize por sua conta e risco.")
