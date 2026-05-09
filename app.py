@@ -1,5 +1,6 @@
 import streamlit as st
 from services.drug_service import (
+    load_drugs,
     get_drug_data,
     needs_species,
     needs_indication,
@@ -10,13 +11,11 @@ from services.drug_service import (
 
 st.title("🐾 Calculadora Veterinária de Doses")
 
-# 🧠 1) escolher droga
-drug_list = [
-    "maropitant",
-    "amoxicilina",
-    "meloxicam",
-    "prednisolona"
-]
+# carregar banco atualizado
+drugs_db = load_drugs()
+
+# lista automática de fármacos
+drug_list = sorted(list(drugs_db.keys()))
 
 drug = st.selectbox("Escolha o fármaco:", drug_list)
 
