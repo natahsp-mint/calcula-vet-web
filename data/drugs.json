@@ -1,4 +1,24 @@
 {
+  "acarbose": {
+    "dose": {
+      "type": "range",
+      "min": 12.5,
+      "max": 25,
+      "interval": "BID",
+      "route": "VO junto à alimentação (dose máxima: 100 mg/animal para cães grandes)"
+    }
+  },
+
+  "acepromazina enteral": {
+    "dose": {
+      "type": "range",
+      "min": 0.5,
+      "max": 2,
+      "interval": "dose única",
+      "route": "VO (dose total máxima: 3 mg para cães e 1 mg para gatos)"
+    }
+  },
+
   "acepromazina parenteral": {
     "dose": {
       "type": "range",
@@ -8,14 +28,150 @@
       "route": "IV/IM/SC (dose total máxima: 3mg para cães e 1mg para gatos)"
     }
   },
-  
-  "acepromazina enteral": {
+
+  "acetaminofeno": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "fixed",
+          "value": 10,
+          "interval": "BID",
+          "route": "VO"
+        }
+      }
+    }
+  },
+
+  "acetato de cálcio": {
+    "dose": {
+      "type": "range",
+      "min": 30,
+      "max": 45,
+      "interval": "BID",
+      "route": "VO misturado à alimentação (ajustar dose por dosagem sérica de fosfato)"
+    }
+  },
+
+  "acetato de potássio": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 0.1,
+          "max": 2,
+          "interval": "a cada 8 horas",
+          "route": "VO (g/animal)"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "range",
+          "min": 100,
+          "max": 325,
+          "interval": "BID",
+          "route": "VO (mg/animal)"
+        }
+      }
+    }
+  },
+
+  "acetato de zinco": {
+    "dose": {
+      "type": "range",
+      "min": 5,
+      "max": 10,
+      "interval": "SID",
+      "route": "VO (mg de zinco elementar/kg)"
+    }
+  },
+
+  "acetazolamida": {
+    "dose": {
+      "type": "range",
+      "min": 6,
+      "max": 8,
+      "interval": "a cada 8-12 horas",
+      "route": "VO"
+    }
+  },
+
+  "ácido acetilsalicílico": {
+    "species": {
+      "cão": {
+        "indications": {
+          "analgésico": {
+            "dose": {
+              "type": "range",
+              "min": 10,
+              "max": 20,
+              "interval": "BID",
+              "route": "VO (preferir especialidades tamponadas)"
+            }
+          },
+          "antiagregante plaquetário": {
+            "dose": {
+              "type": "range",
+              "min": 0.5,
+              "max": 1,
+              "interval": "SID",
+              "route": "VO"
+            }
+          }
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "fixed",
+          "value": 10,
+          "interval": "a cada 48-72 horas",
+          "route": "VO (preferir especialidades tamponadas)"
+        }
+      }
+    }
+  },
+
+  "ácido acetoidroxâmico": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "fixed",
+          "value": 12.5,
+          "interval": "BID",
+          "route": "VO"
+        }
+      }
+    }
+  },
+
+  "ácido aminocapróico": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "fixed",
+          "value": 15,
+          "interval": "a cada 8 horas",
+          "route": "IV/VO (em mielopatia degenerativa, associar a hematínicos)"
+        }
+      }
+    }
+  },
+
+  "ácido fólico": {
     "dose": {
       "type": "range",
       "min": 0.5,
       "max": 2,
-      "interval": "dose única",
-      "route": "VO (dose total máxima: 3 mg para cães e 1 mg para gatos)"
+      "interval": "SID",
+      "route": "VO (mg/animal)"
+    }
+  },
+
+  "ácido tolfenâmico": {
+    "dose": {
+      "type": "fixed",
+      "value": 4,
+      "interval": "SID durante 3-5 dias (dor crônica: 3-5 dias/semana)",
+      "route": "IM/SC/VO"
     }
   },
 
@@ -29,12 +185,508 @@
     }
   },
 
+  "ácido ursodesoxicólico": {
+    "dose": {
+      "type": "range",
+      "min": 10,
+      "max": 15,
+      "interval": "SID",
+      "route": "VO"
+    }
+  },
+
+  "ácido valpróico": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "fixed",
+          "value": 60,
+          "interval": "a cada 8 horas",
+          "route": "VO (associar a fenobarbital ou brometos)"
+        }
+      }
+    }
+  },
+
+  "ácido zoledrônico": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 1,
+          "max": 4,
+          "interval": "dose única",
+          "route": "IV lento em 10-15 min (mg/animal)"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "fixed",
+          "value": 1,
+          "interval": "dose única",
+          "route": "IV lento em 15 min (mg/animal)"
+        }
+      }
+    }
+  },
+
+  "ácidos graxos polinsaturados": {
+    "dose": {
+      "type": "range",
+      "min": 120,
+      "max": 300,
+      "interval": "SID",
+      "route": "VO (mg EPA+DHA/kg/dia; 300 mg/kg para osteoartrite)"
+    }
+  },
+
+  "acitretina": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 0.5,
+          "max": 3,
+          "interval": "SID",
+          "route": "VO"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "fixed",
+          "value": 3,
+          "interval": "SID",
+          "route": "VO (carcinoma de células escamosas)"
+        }
+      }
+    }
+  },
+
+  "ademetionina": {
+    "dose": {
+      "type": "fixed",
+      "value": 20,
+      "interval": "SID",
+      "route": "VO com estômago vazio"
+    }
+  },
+
+  "afoxolaner": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "fixed",
+          "value": 2.5,
+          "interval": "a cada 30 dias",
+          "route": "VO (demodicose: 4 doses intervaladas de 2 semanas)"
+        }
+      }
+    }
+  },
+
+  "aglepristona": {
+    "species": {
+      "cão": {
+        "indications": {
+          "abortivo": {
+            "dose": {
+              "type": "fixed",
+              "value": 10,
+              "interval": "repetir após 24h",
+              "route": "SC (dias 1 e 2)"
+            }
+          },
+          "indutor do parto": {
+            "dose": {
+              "type": "fixed",
+              "value": 15,
+              "interval": "repetir após 24h",
+              "route": "SC (após 58 dias de gestação)"
+            }
+          },
+          "piometra": {
+            "dose": {
+              "type": "fixed",
+              "value": 10,
+              "interval": "dias 1, 2 e 8",
+              "route": "SC (associar a antibioticoterapia)"
+            }
+          }
+        }
+      },
+      "felino": {
+        "indications": {
+          "abortivo": {
+            "dose": {
+              "type": "fixed",
+              "value": 15,
+              "interval": "repetir após 24h",
+              "route": "SC"
+            }
+          },
+          "hiperplasia mamária fibroadenomatosa": {
+            "dose": {
+              "type": "fixed",
+              "value": 10,
+              "interval": "2x/semana durante 3-4 semanas",
+              "route": "SC"
+            }
+          }
+        }
+      }
+    }
+  },
+
   "albendazol": {
     "dose": {
       "type": "fixed",
       "value": 25,
+      "interval": "BID durante 3-5 dias",
+      "route": "VO"
+    }
+  },
+
+  "albumina humana": {
+    "dose": {
+      "type": "range",
+      "min": 0.5,
+      "max": 1.25,
+      "interval": "dose única em 12h",
+      "route": "IV (meta: albumina sérica 2-2,5 g/dl)"
+    }
+  },
+
+  "alfadarbepoetina": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "fixed",
+          "value": 0.8,
+          "interval": "a cada 7 dias",
+          "route": "SC (mcg/kg)"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "fixed",
+          "value": 1,
+          "interval": "a cada 7 dias",
+          "route": "SC (mcg/kg)"
+        }
+      }
+    }
+  },
+
+  "alfaepoetina": {
+    "dose": {
+      "type": "fixed",
+      "value": 100,
+      "interval": "3x/semana SC até hematócrito 40%, depois 1-2x/semana",
+      "route": "SC (UI/kg; associar sulfato ferroso 10 mg/kg/dia VO)"
+    }
+  },
+
+  "alfainterferona 2b": {
+    "species": {
+      "cão": {
+        "indications": {
+          "estimulante do apetite": {
+            "dose": {
+              "type": "fixed",
+              "value": 0.1,
+              "interval": "a cada 14 dias",
+              "route": "VO (UI/kg)"
+            }
+          },
+          "imunoestimulante": {
+            "dose": {
+              "type": "fixed",
+              "value": 1000,
+              "interval": "SID",
+              "route": "VO (UI/kg)"
+            }
+          },
+          "neoplasias": {
+            "dose": {
+              "type": "range",
+              "min": 1500000,
+              "max": 2000000,
+              "interval": "2-3x/semana",
+              "route": "SC (UI/m²)"
+            }
+          }
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "fixed",
+          "value": 30,
+          "interval": "SID por 7 dias em semanas alternadas até remissão",
+          "route": "VO (UI/animal; doenças virais não neoplásicas)"
+        }
+      }
+    }
+  },
+
+  "alfaxalona": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "fixed",
+          "value": 2.2,
+          "interval": "dose única (manutenção: bolus 1,5 mg/kg até 12 mg/kg total)",
+          "route": "IV lento 60 seg"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "fixed",
+          "value": 4,
+          "interval": "dose única (manutenção: bolus 1-1,5 mg/kg)",
+          "route": "IV lento 60 seg"
+        }
+      }
+    }
+  },
+
+  "alfentanila": {
+    "species": {
+      "cão": {
+        "indications": {
+          "pré-anestésico": {
+            "dose": {
+              "type": "fixed",
+              "value": 0.005,
+              "interval": "dose única 30 min antes do propofol",
+              "route": "IV (+ 0,3-0,6 mg atropina/animal IV)"
+            }
+          },
+          "complemento analgésico": {
+            "dose": {
+              "type": "range",
+              "min": 0.002,
+              "max": 0.005,
+              "interval": "a cada 20 min",
+              "route": "IV"
+            }
+          },
+          "infusão contínua": {
+            "dose": {
+              "type": "range",
+              "min": 0.0005,
+              "max": 0.001,
+              "interval": "contínuo (mg/kg/min)",
+              "route": "IV"
+            }
+          }
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "fixed",
+          "value": 0.001,
+          "interval": "dose única + infusão contínua 0,0008 mg/kg/min",
+          "route": "IV"
+        }
+      }
+    }
+  },
+
+  "alopurinol": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 10,
+          "max": 15,
+          "interval": "a cada 8-12 horas",
+          "route": "VO (leishmaniose: ver protocolos específicos)"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "range",
+          "min": 10,
+          "max": 20,
+          "interval": "a cada 12-24 horas",
+          "route": "VO (leishmaníostático)"
+        }
+      }
+    }
+  },
+
+  "alprazolam": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 0.02,
+          "max": 0.1,
+          "interval": "a cada 6-12 horas",
+          "route": "VO (máx 4 mg/animal/dia)"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "range",
+          "min": 0.125,
+          "max": 0.25,
+          "interval": "a cada 8-24 horas",
+          "route": "VO (mg/animal)"
+        }
+      }
+    }
+  },
+
+  "alteplase": {
+    "species": {
+      "felino": {
+        "dose": {
+          "type": "range",
+          "min": 0.25,
+          "max": 1,
+          "interval": "dose única (máx 10 mg total)",
+          "route": "IV/h"
+        }
+      }
+    }
+  },
+
+  "altrenogest": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "fixed",
+          "value": 0.01,
+          "interval": "SID",
+          "route": "VO (insuficiência luteal)"
+        }
+      }
+    }
+  },
+
+  "amantadina": {
+    "dose": {
+      "type": "range",
+      "min": 2,
+      "max": 5,
+      "interval": "a cada 12-24 horas",
+      "route": "VO (associar a AINE para controle da dor crônica)"
+    }
+  },
+
+  "amicacina": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 10,
+          "max": 15,
+          "interval": "SID",
+          "route": "IV/IM/SC (sepse: até 20-30 mg/kg; galgos: máx 10 mg/kg)"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "range",
+          "min": 10,
+          "max": 15,
+          "interval": "SID",
+          "route": "IV/IM/SC (sepse: até 20 mg/kg/24h IV)"
+        }
+      }
+    }
+  },
+
+  "aminofilina": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 5,
+          "max": 10,
+          "interval": "a cada 6-8 horas",
+          "route": "IV/IM/VO"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "range",
+          "min": 3,
+          "max": 8,
+          "interval": "BID",
+          "route": "IV/IM/SC/VO"
+        }
+      }
+    }
+  },
+
+  "aminopentamida": {
+    "dose": {
+      "type": "range",
+      "min": 0.1,
+      "max": 0.5,
+      "interval": "a cada 8-12 horas",
+      "route": "IM/SC/VO (mg/animal)"
+    }
+  },
+
+  "aminosidina": {
+    "dose": {
+      "type": "fixed",
+      "value": 10.5,
       "interval": "BID",
-      "route": "VO durante 3-4 dias"
+      "route": "IM/SC (ou 150 mg/kg BID-SID VO; leishmaniose: ver protocolos específicos)"
+    }
+  },
+
+  "amiodarona": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 5,
+          "max": 10,
+          "interval": "BID (primeiros 7 dias: 10 mg/kg BID)",
+          "route": "VO"
+        }
+      }
+    }
+  },
+
+  "amitraz": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "fixed",
+          "value": 2,
+          "interval": "semanal (aumentar 0,5 ml/semana até máx 4 ml/litro na demodicose)",
+          "route": "Tópico: 2 ml sol. 12,5% diluídos em 1 litro de água"
+        }
+      }
+    }
+  },
+
+  "amitriptilina": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 1,
+          "max": 2,
+          "interval": "BID (pode aumentar até 4 mg/kg se sem resposta)",
+          "route": "VO"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "range",
+          "min": 1,
+          "max": 2,
+          "interval": "a cada 12-24 horas",
+          "route": "VO"
+        }
+      }
     }
   },
 
@@ -48,6 +700,835 @@
     }
   },
 
+  "amoxicilina + clavulanato de potássio": {
+    "dose": {
+      "type": "range",
+      "min": 15,
+      "max": 20,
+      "interval": "a cada 8-12 horas",
+      "route": "IM/SC/VO"
+    }
+  },
+
+  "ampicilina sódica": {
+    "dose": {
+      "type": "range",
+      "min": 10,
+      "max": 30,
+      "interval": "a cada 6-12 horas",
+      "route": "IV/IM/SC/VO"
+    }
+  },
+
+  "ampicilina sódica + sulbactam sódico": {
+    "dose": {
+      "type": "range",
+      "min": 15,
+      "max": 30,
+      "interval": "a cada 8 horas",
+      "route": "IV"
+    }
+  },
+
+  "amprólio": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "fixed",
+          "value": 600,
+          "interval": "SID por máx 10 dias",
+          "route": "VO (mg/litro de água; filhotes: 100-200 mg/animal/dia)"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "range",
+          "min": 60,
+          "max": 100,
+          "interval": "SID por 7 dias",
+          "route": "VO (mg/animal)"
+        }
+      }
+    }
+  },
+
+  "anfotericina b": {
+    "species": {
+      "cão": {
+        "indications": {
+          "desoxicolato IV": {
+            "dose": {
+              "type": "fixed",
+              "value": 0.5,
+              "interval": "3x/semana em dias alternados (dose cumulativa máx 9-12 mg/kg)",
+              "route": "IV em glicose 5% (0,1 mg/ml) em 4-6h"
+            }
+          },
+          "desoxicolato SC": {
+            "dose": {
+              "type": "fixed",
+              "value": 0.5,
+              "interval": "2-3x/semana",
+              "route": "SC diluído em glicose 2,5%"
+            }
+          },
+          "lipossomal IV": {
+            "dose": {
+              "type": "range",
+              "min": 1,
+              "max": 3.3,
+              "interval": "3x/semana em dias alternados (dose cumulativa máx 25-30 mg/kg)",
+              "route": "IV em glicose 5% (1 mg/ml) em 2h"
+            }
+          }
+        }
+      },
+      "felino": {
+        "indications": {
+          "desoxicolato IV": {
+            "dose": {
+              "type": "fixed",
+              "value": 0.25,
+              "interval": "3x/semana em dias alternados (dose cumulativa máx 6-9 mg/kg)",
+              "route": "IV em glicose 5% (0,1 mg/ml) em 4-6h"
+            }
+          },
+          "desoxicolato SC": {
+            "dose": {
+              "type": "fixed",
+              "value": 0.5,
+              "interval": "2-3x/semana",
+              "route": "SC diluído em glicose 2,5%"
+            }
+          },
+          "lipossomal IV": {
+            "dose": {
+              "type": "fixed",
+              "value": 1,
+              "interval": "3x/semana em dias alternados (dose cumulativa máx 12 mg/kg)",
+              "route": "IV em glicose 5% (1 mg/ml) em 1-2h"
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "anlodipino, besilato de": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 0.1,
+          "max": 0.5,
+          "interval": "SID",
+          "route": "VO (iniciar com doses mais baixas)"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "range",
+          "min": 0.625,
+          "max": 1.25,
+          "interval": "SID",
+          "route": "VO (mg/animal; hipertensão grave: até 1,25 mg/kg BID)"
+        }
+      }
+    }
+  },
+
+  "antimoniato de meglumina": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "fixed",
+          "value": 100,
+          "interval": "SID por 30 dias SC (ou 50-75 mg/kg BID por 30-60 dias)",
+          "route": "SC (ver protocolos de leishmaniose nos anexos)"
+        }
+      }
+    }
+  },
+
+  "apomorfina": {
+    "species": {
+      "cão": {
+        "indications": {
+          "IV": {
+            "dose": {
+              "type": "range",
+              "min": 0.03,
+              "max": 0.04,
+              "interval": "dose única",
+              "route": "IV"
+            }
+          },
+          "IM": {
+            "dose": {
+              "type": "fixed",
+              "value": 0.04,
+              "interval": "dose única",
+              "route": "IM"
+            }
+          }
+        }
+      },
+      "felino": {
+        "indications": {
+          "IV": {
+            "dose": {
+              "type": "fixed",
+              "value": 0.04,
+              "interval": "dose única",
+              "route": "IV — CUIDADO"
+            }
+          },
+          "IM/SC": {
+            "dose": {
+              "type": "fixed",
+              "value": 0.08,
+              "interval": "dose única",
+              "route": "IM/SC — CUIDADO"
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "asparaginase": {
+    "dose": {
+      "type": "fixed",
+      "value": 400,
+      "interval": "a cada 7 dias",
+      "route": "IM/SC (ou 10.000 UI/m²; máx 10.000 UI/animal)"
+    }
+  },
+
+  "atenolol": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 0.25,
+          "max": 1,
+          "interval": "BID",
+          "route": "VO"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "range",
+          "min": 6.25,
+          "max": 12.5,
+          "interval": "BID",
+          "route": "VO (mg/animal)"
+        }
+      }
+    }
+  },
+
+  "atipamezol": {
+    "dose": {
+      "type": "fixed",
+      "value": 0.1,
+      "interval": "dose única",
+      "route": "IM/IO"
+    }
+  },
+
+  "atovaquona": {
+    "dose": {
+      "type": "fixed",
+      "value": 15,
+      "interval": "a cada 8 horas por 10 dias",
+      "route": "VO (+ azitromicina 10 mg/kg SID VO)"
+    }
+  },
+
+  "atracúrio, besilato de": {
+    "dose": {
+      "type": "range",
+      "min": 0.1,
+      "max": 0.2,
+      "interval": "bolus a cada 20-30 min (ou infusão contínua 0,1 mg/kg/h)",
+      "route": "IV lento"
+    }
+  },
+
+  "atropina, sulfato de": {
+    "species": {
+      "cão": {
+        "indications": {
+          "pré-anestésico": {
+            "dose": {
+              "type": "fixed",
+              "value": 0.02,
+              "interval": "dose única",
+              "route": "IV/IM"
+            }
+          },
+          "intoxicação por organofosforados": {
+            "dose": {
+              "type": "range",
+              "min": 0.2,
+              "max": 0.5,
+              "interval": "repetir conforme necessidade",
+              "route": "IV/IM/SC"
+            }
+          }
+        }
+      },
+      "felino": {
+        "indications": {
+          "pré-anestésico": {
+            "dose": {
+              "type": "fixed",
+              "value": 0.02,
+              "interval": "dose única",
+              "route": "IV/IM"
+            }
+          },
+          "intoxicação por organofosforados": {
+            "dose": {
+              "type": "range",
+              "min": 0.2,
+              "max": 0.5,
+              "interval": "repetir conforme necessidade",
+              "route": "IV/IM/SC"
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "auranofina": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 0.05,
+          "max": 0.2,
+          "interval": "BID",
+          "route": "VO (máx 9 mg/animal/dia)"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "range",
+          "min": 0.2,
+          "max": 0.3,
+          "interval": "BID",
+          "route": "VO"
+        }
+      }
+    }
+  },
+
+  "azatioprina": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 0.5,
+          "max": 2,
+          "interval": "SID por 14 dias, depois a cada 24-48h conforme resposta",
+          "route": "VO"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "range",
+          "min": 0.2,
+          "max": 0.3,
+          "interval": "a cada 48 horas",
+          "route": "VO (usar com extrema cautela)"
+        }
+      }
+    }
+  },
+
+  "azitromicina": {
+    "dose": {
+      "type": "range",
+      "min": 5,
+      "max": 10,
+      "interval": "SID durante 3-7 dias (alguns tratamentos: até 30 dias)",
+      "route": "VO"
+    }
+  },
+
+  "aztreonam": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "fixed",
+          "value": 30,
+          "interval": "a cada 6-8 horas",
+          "route": "IV/IM"
+        }
+      }
+    }
+  },
+
+  "azul de metileno": {
+    "species": {
+      "cão": {
+        "indications": {
+          "antiséptico urinário": {
+            "dose": {
+              "type": "fixed",
+              "value": 65,
+              "interval": "a cada 8-24 horas por 7 dias",
+              "route": "VO (mg/animal)"
+            }
+          },
+          "metemoglobinemia": {
+            "dose": {
+              "type": "range",
+              "min": 1,
+              "max": 1.5,
+              "interval": "repetir conforme necessidade",
+              "route": "IV lento (sol. 1%)"
+            }
+          }
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "fixed",
+          "value": 1.5,
+          "interval": "dose única",
+          "route": "IV (metemoglobinemia)"
+        }
+      }
+    }
+  },
+
+  "baclofeno": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 1,
+          "max": 2,
+          "interval": "a cada 8 horas",
+          "route": "VO (máx 10 mg/animal)"
+        }
+      }
+    }
+  },
+
+  "benazepril": {
+    "dose": {
+      "type": "range",
+      "min": 0.25,
+      "max": 0.5,
+      "interval": "a cada 12-24 horas",
+      "route": "VO"
+    }
+  },
+
+  "benzidamina": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "fixed",
+          "value": 1.5,
+          "interval": "a cada 6-8 horas",
+          "route": "VO"
+        }
+      }
+    }
+  },
+
+  "benzilpenicilina benzatina": {
+    "dose": {
+      "type": "fixed",
+      "value": 40000,
+      "interval": "a cada 3-5 dias",
+      "route": "IM (UI/kg)"
+    }
+  },
+
+  "benzilpenicilina potássica": {
+    "dose": {
+      "type": "fixed",
+      "value": 20000,
+      "interval": "a cada 6 horas",
+      "route": "IV/IM/SC (UI/kg)"
+    }
+  },
+
+  "benzilpenicilina procaína": {
+    "dose": {
+      "type": "fixed",
+      "value": 20000,
+      "interval": "SID",
+      "route": "IM/SC (UI/kg)"
+    }
+  },
+
+  "benzonatato": {
+    "dose": {
+      "type": "range",
+      "min": 1,
+      "max": 2,
+      "interval": "a cada 8-24 horas",
+      "route": "VO"
+    }
+  },
+
+  "betametasona": {
+    "dose": {
+      "type": "range",
+      "min": 0.15,
+      "max": 2,
+      "interval": "a cada 12-24 horas",
+      "route": "IV/VO (mg/animal)"
+    }
+  },
+
+  "betanecol, cloreto de": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 2.5,
+          "max": 25,
+          "interval": "a cada 8-12 horas",
+          "route": "VO (mg/animal)"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "range",
+          "min": 1.25,
+          "max": 7.5,
+          "interval": "a cada 8-12 horas",
+          "route": "VO (mg/animal)"
+        }
+      }
+    }
+  },
+
+  "bicarbonato de sódio": {
+    "dose": {
+      "type": "range",
+      "min": 10,
+      "max": 50,
+      "interval": "a cada 8-12 horas",
+      "route": "VO (alcalinizante; acidose: 40-85 mg/kg IV lento)"
+    }
+  },
+
+  "bisacodil": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 5,
+          "max": 15,
+          "interval": "SID",
+          "route": "VO (mg/animal)"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "fixed",
+          "value": 5,
+          "interval": "SID",
+          "route": "VO (mg/animal)"
+        }
+      }
+    }
+  },
+
+  "bleomicina, sulfato de": {
+    "dose": {
+      "type": "range",
+      "min": 0.3,
+      "max": 0.5,
+      "interval": "SID por 3-4 dias, depois semanal (dose cumulativa máx 125-200 mg/m²)",
+      "route": "IV/SC"
+    }
+  },
+
+  "brometo de potássio": {
+    "species": {
+      "cão": {
+        "indications": {
+          "agente isolado": {
+            "dose": {
+              "type": "range",
+              "min": 70,
+              "max": 80,
+              "interval": "SID (ataque: 120 mg/kg/dia por 5 dias)",
+              "route": "VO"
+            }
+          },
+          "associado ao fenobarbital": {
+            "dose": {
+              "type": "range",
+              "min": 30,
+              "max": 35,
+              "interval": "SID",
+              "route": "VO"
+            }
+          }
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "fixed",
+          "value": 30,
+          "interval": "SID",
+          "route": "VO (usar com cautela; contraindicado por alguns autores)"
+        }
+      }
+    }
+  },
+
+  "bromexina, cloridrato de": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 3,
+          "max": 15,
+          "interval": "SID",
+          "route": "IV/IM/SC/VO (mg/animal)"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "range",
+          "min": 3,
+          "max": 6,
+          "interval": "SID",
+          "route": "IV/IM/SC/VO (mg/animal)"
+        }
+      }
+    }
+  },
+
+  "bromocriptina, mesilato de": {
+    "species": {
+      "cão": {
+        "indications": {
+          "pseudociese": {
+            "dose": {
+              "type": "range",
+              "min": 0.01,
+              "max": 0.05,
+              "interval": "BID por 10 dias",
+              "route": "VO"
+            }
+          },
+          "abortivo": {
+            "dose": {
+              "type": "range",
+              "min": 0.05,
+              "max": 0.1,
+              "interval": "BID por 4-7 dias",
+              "route": "VO"
+            }
+          }
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "fixed",
+          "value": 0.2,
+          "interval": "SID",
+          "route": "VO (mg/animal)"
+        }
+      }
+    }
+  },
+
+  "bromoprida": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 0.2,
+          "max": 0.3,
+          "interval": "a cada 8 horas",
+          "route": "IM/VO"
+        }
+      }
+    }
+  },
+
+  "buclizina": {
+    "species": {
+      "cão": {
+        "indications": {
+          "orexígeno": {
+            "dose": {
+              "type": "range",
+              "min": 6,
+              "max": 25,
+              "interval": "SID 30 min antes da alimentação",
+              "route": "VO (mg/animal)"
+            }
+          },
+          "anti-histamínico": {
+            "dose": {
+              "type": "fixed",
+              "value": 0.5,
+              "interval": "a cada 8 horas",
+              "route": "VO"
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "budesonida": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 1,
+          "max": 3,
+          "interval": "SID",
+          "route": "VO (mg/animal ou 3 mg/m²)"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "fixed",
+          "value": 3,
+          "interval": "SID",
+          "route": "VO (mg/m²)"
+        }
+      }
+    }
+  },
+
+  "bumetanida": {
+    "dose": {
+      "type": "fixed",
+      "value": 0.1,
+      "interval": "SID",
+      "route": "VO"
+    }
+  },
+
+  "bupivacaína, cloridrato de": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 1,
+          "max": 2,
+          "interval": "dose única",
+          "route": "Infiltração local (retrobulbar: 0,5 mg/kg)"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "fixed",
+          "value": 1.1,
+          "interval": "dose única",
+          "route": "Infiltração local (retrobulbar: 1 mg/kg)"
+        }
+      }
+    }
+  },
+
+  "buprenorfina": {
+    "species": {
+      "cão": {
+        "dose": {
+          "type": "range",
+          "min": 0.005,
+          "max": 0.03,
+          "interval": "a cada 6-12 horas",
+          "route": "IV/IM/SC/epidural (analgésico intrabucal pré-cirúrgico: 0,12 mg/kg)"
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "range",
+          "min": 0.01,
+          "max": 0.03,
+          "interval": "a cada 6-8 horas",
+          "route": "Intrabucal"
+        }
+      }
+    }
+  },
+
+  "buspirona": {
+    "dose": {
+      "type": "range",
+      "min": 0.5,
+      "max": 1,
+      "interval": "a cada 8-12 horas",
+      "route": "VO"
+    }
+  },
+
+  "bussulfano": {
+    "dose": {
+      "type": "range",
+      "min": 2,
+      "max": 4,
+      "interval": "SID",
+      "route": "VO (mg/m²)"
+    }
+  },
+
+  "butorfanol, tartarato de": {
+    "species": {
+      "cão": {
+        "indications": {
+          "antitussígeno": {
+            "dose": {
+              "type": "range",
+              "min": 0.05,
+              "max": 0.1,
+              "interval": "a cada 6-12 horas",
+              "route": "SC/VO"
+            }
+          },
+          "analgésico/sedativo": {
+            "dose": {
+              "type": "range",
+              "min": 0.1,
+              "max": 0.5,
+              "interval": "dose única",
+              "route": "IV/IM/SC (epidural: 0,25 mg/kg)"
+            }
+          },
+          "pré-anestésico": {
+            "dose": {
+              "type": "range",
+              "min": 0.2,
+              "max": 0.4,
+              "interval": "dose única 30 min antes",
+              "route": "IM/SC"
+            }
+          }
+        }
+      },
+      "felino": {
+        "dose": {
+          "type": "range",
+          "min": 0.01,
+          "max": 0.03,
+          "interval": "a cada 6-8 horas",
+          "route": "Intrabucal (analgésico)"
+        }
+      }
+    }
+  },
+
   "condroitina, sulfato de": {
     "dose": {
       "type": "range",
@@ -57,7 +1538,7 @@
       "route": "VO durante 4-6 semanas; se houver resposta positiva, pode ser administrada BID."
     }
   },
-  
+
   "maropitant": {
     "dose": {
       "type": "fixed",
@@ -89,7 +1570,7 @@
   },
 
   "prednisolona": {
-    "species": {     
+    "species": {
       "cão": {
         "indications": {
           "alergia": {
