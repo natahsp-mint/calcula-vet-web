@@ -85,8 +85,4 @@ if st.button("Calcular dose"):
     st.success(resultado)
 
 st.divider()
-<<<<<<< HEAD
-st.caption("Este material serve de apoio e não dispensa julgamento clínico, utilize por sua conta e risco.")
-=======
 st.caption("Este material é baseado na 4ª Edição do Guia Terapêutico Veterinário e serve de apoio, não dispensando julgamento clínico. Utilize por sua conta e risco.")
->>>>>>> 4ac0976 (organizes drugs.json)
